@@ -1,3 +1,9 @@
+<!-- Basic CNN web application for binary classification. -->
+
+
+
+
+
 <!-- create environment -->
 conda create --prefix ./env python=3.6 -y
 
