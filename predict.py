@@ -2,8 +2,7 @@
 
 import numpy as np
 from keras.models import load_model
-from keras.preprocessing import image
-
+from tensorflow.keras.preprocessing import image
 class dogcat:
     def __init__(self,filename):
         self.filename =filename
@@ -20,7 +19,7 @@ class dogcat:
         test_image = np.expand_dims(test_image, axis = 0)
         result = model.predict(test_image)
 
-        if result[0][0] == 1:
+        if result[0][0] == 0:
             prediction = 'dog'
             return [{ "image" : prediction}]
         else:
